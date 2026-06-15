@@ -130,8 +130,8 @@ export default function App() {
 
   const copy = {
     en: {
-      heroHeading: "Modernizing East Africa’s Commercial Frontier with High-Performance React Web Solutions",
-      heroSub: "We build elite full-stack database architectures, secure financial payment pipelines, and localized semantic layers for enterprises moving beyond analog limitations.",
+      heroHeading: "High-Performance Next-Gen Web Solutions & Systems for Ethiopia's Elite Enterprises",
+      heroSub: "We build elite custom-coded React applications, secure Telebirr integration pipelines, and optimized cloud databases crafted specifically for the local internet ecosystem of Addis Ababa.",
       ctaPrimary: "Request Free Consultation", // Updated to client focus
       ctaSecondary: "View Client Successes",
       telemetryTitle: "TECHNICAL PERFORMANCE METRIC INDEX",
@@ -159,8 +159,8 @@ export default function App() {
       polyGrid: "Drafting Dot-Mesh Layer Grid"
     },
     am: {
-      heroHeading: "ከፍተኛ ጥራት ባላቸው የReact ድረ-ገጾች የኢትዮጵያን የንግድ እንቅስቃሴ እናዘምናለን",
-      heroSub: "ካለፈው ጊዜ የወረቀት መዘግየት አልፈው ስራቸውን ለማሳደግ ለሚፈልጉ ድርጅቶች፤ ደህንነቱ የተጠበቀ የኪንግ ክፍያና የዳታቤዝ አወቃቀሮችን እንዘረጋለን።",
+      heroHeading: "የላቀ ጥራት ያላቸው የReact ድረ-ገጾችን እና የቴሌብር ሲስተሞችን ለኢትዮጵያ ታላላቅ ድርጅቶች እንገነባለን",
+      heroSub: "ድርጅትዎን ወደ ቀጣዩ ምዕራፍ ለማሻገር እጅግ ፈጣን ድረ-ገጾችን፣ ደህንነቱ የተጠበቀ የቴሌብር እና የባንክ ክፍያ ውህደቶችን፣ እንዲሁም ለአገር ውስጥ የኢንተርኔት ፍጥነት ምቹ የሆኑ የዳታቤዝ አወቃቀሮችን እንዘረጋለን።",
       ctaPrimary: "የነፃ ምክክር ያግኙ",
       ctaSecondary: "የስራዎቻችን ዝርዝር",
       telemetryTitle: "ዋና የቴክኖሎጂ አፈፃፀም መለኪያዎች",
@@ -188,8 +188,8 @@ export default function App() {
       polyGrid: "የቴክኒካል መስመር ፍርግርግ መደራረብ"
     },
     om: {
-      heroHeading: "Infraastraaktshara Diijitaalaa Saffisa React Waliin Finfinneetti Ni Ijaarra",
-      heroSub: "Koodii fi database gurguddoo daldaltoota dhangala'aa herregaa ammayyeessuuf sirna ammanaa Telebirr fi PostgreSQL fayyadamnee hojjechuu.",
+      heroHeading: "React Saffisa Guddaa fi Telebirr Ammayyaatiin Daldala Keessan Finfinneetti Ni Guddisna",
+      heroSub: "Dhaabbilee daldalaafi pirojektoota adda addaaf weebsaayitii saffisa qabu, sirna kaffaltii Telebirr amansiisaa ta'een walqunnamsiisuun sirna ammayyaa ni ijaarra.",
       ctaPrimary: "Bilisaan Nu Mari'adhu",
       ctaSecondary: "Hojiiwwan Keenya",
       telemetryTitle: "SAFFISA KOOIDII CORE",

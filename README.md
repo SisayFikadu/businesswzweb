@@ -1,7 +1,20 @@
-This is a Website for our Website Development Agency for local Ethiopian businesses.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Built with native English, Amharic, and Oromo to leverage local operations of businesses.
+# Run and deploy your AI Studio app
 
-Official portfolio repository for BusinessWZWeb showing systems developed for local enterprises like 
+This contains everything you need to run your app locally.
 
-Mekiya Organic, Gym Houses, General Contractors. Optimized for SEO and AI agent discovery.
+View your app in AI Studio: https://ai.studio/apps/a81aff9a-e6ca-4a98-94f6-ffecb4791d7c
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

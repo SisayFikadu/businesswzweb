@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Users, TrendingUp, Target, ShieldAlert, ArrowRight } from "lucide-react";
 
 interface ClientHubProps {
   language: "en" | "am" | "om";
@@ -55,7 +55,31 @@ export default function ClientHub({ language }: ClientHubProps) {
       phoneLabel: "Call Our Direct Line",
       phoneVal: "+251 922 32 68 19",
       emailLabel: "Business Inquiry Email",
-      emailVal: "nafyad@businesswzweb.com"
+      emailVal: "nafyad@businesswzweb.com",
+
+      teamHeading: "Meet Our Client-Scale Strategy Team",
+      teamSub: "Professional Engineers & Marketing Experts Dedicated to Your ROI",
+      member1Name: "Nafyad",
+      member1Role: "Lead Client Success & Growth Strategist",
+      member1Desc: "Expert in translating local business problems into conversion-optimized web funnels and unified payment systems.",
+      member2Name: "Abel",
+      member2Role: "Lead Full-Stack & React Architect",
+      member2Desc: "Optimizes mobile performance for Ethiopia's local network speeds, securing sub-second load times.",
+      member3Name: "Selam",
+      member3Role: "Search Discovery & SEO Engineer",
+      member3Desc: "Ensures your enterprise ranks #1 in Addis Ababa search listings using automated structured schema.",
+      
+      roadmapHeading: "Strategic Problem-to-Goal Evolution",
+      roadmapSubtitle: "How we convert your biggest digital bottlenecks into automated revenue channels",
+      roadmap1Title: "Problem: High Churn & Lost Leads",
+      roadmap1Desc: "Slow, clunky platforms make local mobile users leave within 3 seconds, costing you valuable sales.",
+      roadmap1Solve: "Solution: Sub-second Load Speeds",
+      roadmap2Title: "Problem: Manual Payment Friction",
+      roadmap2Desc: "Making customers copy pay-numbers manually results in incomplete, unlogged sales.",
+      roadmap2Solve: "Solution: One-Click Telebirr & CBE",
+      roadmap3Title: "Problem: Zero Google Visibility",
+      roadmap3Desc: "Potential clients find your competitors because you don't appear for local searches.",
+      roadmap3Solve: "Solution: Instant #1 Local SEO Rank"
     },
     am: {
       aboutTitle: "ስለ እኛ እና የምንሰራቸው ስራዎች",
@@ -91,7 +115,31 @@ export default function ClientHub({ language }: ClientHubProps) {
       phoneLabel: "በቀጥታ ይደውሉልን",
       phoneVal: "+251 922 32 68 19",
       emailLabel: "የኢሜይል አድራሻችን",
-      emailVal: "nafyad@businesswzweb.com"
+      emailVal: "nafyad@businesswzweb.com",
+
+      teamHeading: "የስራ ስኬት እና የስትራቴጂ ቡድናችን",
+      teamSub: "የንግድዎን ገቢ ለማሳደግ የተጉ የቴክኖሎጂ አበልጻጊዎች እና የግብይት ባለሙያዎች",
+      member1Name: "ናፍያድ",
+      member1Role: "ዋና የስራ ስኬት እና እድገት ስትራቴጂስት",
+      member1Desc: "የንግድዎን ችግሮች ወደ ደንበኛ መሳቢያ ዌብሳይት ዲዛይን እና ክፍያ ውህደት በመቀየር ረገድ ባለሙያ።",
+      member2Name: "አቤል",
+      member2Role: "ዋና የReact እና የሲስተም አርክቴክት",
+      member2Desc: "ለሰከንድ ባልሞላ ጊዜ ውስጥ ድረ-ገጾች በኢትዮጵያ የስልክ ኢንተርኔት በፍጥነት እንዲከፈቱ ያደርጋል።",
+      member3Name: "ሰላም",
+      member3Role: "ዋና የፍለጋ ሞተር (SEO) እና እድገት መሃንዲስ",
+      member3Desc: "በጎግል ፍለጋዎች ላይ የድርጅትዎን ስም በግንባር ቀደምትነት እንዲቀመጥ ያደርጋል።",
+      
+      roadmapHeading: "ከችግር ወደ ስኬት የሚያሸጋግር ስልት",
+      roadmapSubtitle: "የድርጅትዎን ዲጂታል እክሎች ወደ ገቢ መፍጠሪያ መንገዶች እንዴት እንደምንቀይራቸው",
+      roadmap1Title: "ችግር፡ የድረ-ገጽ መዘግየትና ደንበኛ ማጣት",
+      roadmap1Desc: "በዘገምተኛ ድረ-ገጽ ምክንያት የከተማው ደንበኞች በ 3 ሰከንድ ውስጥ ተስፋ ቆርጠው ይወጣሉ።",
+      roadmap1Solve: "መፍትሄ፡ እጅግ ፈጣን የReact መዋቅር",
+      roadmap2Title: "ችግር፡ የተወሳሰበ የክፍያ ሂደት",
+      roadmap2Desc: "የሂሳብ ቁጥር ገልብጠው እንዲልኩ ማድረግ ደንበኞችን ስለሚሰለች ሽያጭ ይቀንሳል።",
+      roadmap2Solve: "መፍትሄ፡ የቴሌብር እና CBE ቀላል ክፍያ",
+      roadmap3Title: "ችግር፡ በጎግል ላይ አለመገኘት",
+      roadmap3Desc: "ሰዎች አገልግሎትዎን ሲፈልጉ ድረ-ገጽዎ ባለመገኘቱ ምክንያት ወደ ተወዳዳሪዎች ይሄዳሉ።",
+      roadmap3Solve: "መፍትሄ፡ ቁጥር #1 የአካባቢ SEO ደረጃ"
     },
     om: {
       aboutTitle: "Eenyu Nu'i fi Hojii Keenya",
@@ -127,7 +175,31 @@ export default function ClientHub({ language }: ClientHubProps) {
       phoneLabel: "Lakkofsa Bilbilaa",
       phoneVal: "+251 922 32 68 19",
       emailLabel: "I-meelii",
-      emailVal: "nafyad@businesswzweb.com"
+      emailVal: "nafyad@businesswzweb.com",
+
+      teamHeading: "Garee Karoora fi Milkaa'ina Daldala Keessanii",
+      teamSub: "Ogeeyyii Teeknoolojii fi Marketing Galii Keessan Guddisuuf Hojjetan",
+      member1Name: "Nafyad",
+      member1Role: "Strategist Guddisa fi Milkaa'ina Maamilaa",
+      member1Desc: "Rakkina daldalootaa gara dizaayinii weebsaayitiitti hiikuudhaan kaffaltii Telebirr mijeessa.",
+      member2Name: "Abel",
+      member2Role: "Architect React fi Full-Stack Ol'aanaa",
+      member2Desc: "Networkii biyya keessaatiif akka saffisutti weebsaayitiin akka banamu mijeessa.",
+      member3Name: "Selam",
+      member3Role: "Engineer SEO fi Google Search",
+      member3Desc: "Barbaacha Google irratti daldalli kee akka #1 rank ta'u godha.",
+      
+      roadmapHeading: "Rakkina Irraa Gara Galma Strategic-tti",
+      roadmapSubtitle: "Akkamitti gufuulee daldala keessanii gara meeshaa galii fiduutti jijjiirra",
+      roadmap1Title: "Rakkina: Saffisa gadi aanaa fi maamila dhabuu",
+      roadmap1Desc: "Weebsaayitiin laafaan daqiiqaa 3 keessatti maamilli akka dhiisee deemu godha.",
+      roadmap1Solve: "Furmaata: Saffisa Saffisa-Guddaa React",
+      roadmap2Title: "Rakkina: Walxaxaa kaffaltii harkaa",
+      roadmap2Desc: "Account baankiirra kofii gochuun kaffaluun hojii nuffisiisaa gurgurtaa hir'isu dha.",
+      roadmap2Solve: "Furmaata: Telebirr fi CBE Direct Click",
+      roadmap3Title: "Rakkina: Google irratti dhabamuu",
+      roadmap3Desc: "Maamiltoonni Google daldala kee dhabanii gara kaanitti deemu.",
+      roadmap3Solve: "Furmaata: Instant #1 Rank Local SEO"
     }
   };
 
@@ -253,6 +325,156 @@ export default function ClientHub({ language }: ClientHubProps) {
             </div>
           </div>
 
+        </div>
+
+        {/* Strategic Problem-to-Goal Evolution Map */}
+        <div className="mt-24 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-amber-500 mb-4">
+              <Target className="h-3.5 w-3.5" />
+              <span>THE STRATEGIC ROADMAP</span>
+            </div>
+            <h3 className="text-3xl font-black tracking-tight text-white font-sans sm:text-4xl">
+              {t.roadmapHeading}
+            </h3>
+            <p className="mt-2 text-xs text-zinc-400 font-sans max-w-xl mx-auto leading-relaxed">
+              {t.roadmapSubtitle}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+            {/* Step 1 */}
+            <div className="rounded-2xl border border-zinc-850 bg-zinc-950/40 backdrop-blur-xl p-6 relative overflow-hidden group hover:border-red-500/30 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-red-500/[0.015] rounded-bl-full pointer-events-none" />
+                <div className="flex items-center gap-2 text-red-400 mb-4 font-mono text-[10px] font-bold tracking-wider uppercase">
+                  <ShieldAlert className="h-4.5 w-4.5" />
+                  <span>{t.roadmap1Title}</span>
+                </div>
+                <p className="text-xs text-zinc-400 leading-relaxed font-sans mb-6">
+                  {t.roadmap1Desc}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-emerald-400 pt-4 border-t border-zinc-900/60 font-black text-xs font-mono uppercase tracking-wide">
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+                <span>{t.roadmap1Solve}</span>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="rounded-2xl border border-zinc-850 bg-zinc-950/40 backdrop-blur-xl p-6 relative overflow-hidden group hover:border-amber-500/30 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-amber-500/[0.015] rounded-bl-full pointer-events-none" />
+                <div className="flex items-center gap-2 text-amber-550 mb-4 font-mono text-[10px] font-bold tracking-wider uppercase">
+                  <Target className="h-4.5 w-4.5" />
+                  <span>{t.roadmap2Title}</span>
+                </div>
+                <p className="text-xs text-zinc-400 leading-relaxed font-sans mb-6">
+                  {t.roadmap2Desc}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-emerald-400 pt-4 border-t border-zinc-900/60 font-black text-xs font-mono uppercase tracking-wide">
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+                <span>{t.roadmap2Solve}</span>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="rounded-2xl border border-zinc-850 bg-zinc-950/40 backdrop-blur-xl p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/[0.015] rounded-bl-full pointer-events-none" />
+                <div className="flex items-center gap-2 text-blue-400 mb-4 font-mono text-[10px] font-bold tracking-wider uppercase">
+                  <TrendingUp className="h-4.5 w-4.5" />
+                  <span>{t.roadmap3Title}</span>
+                </div>
+                <p className="text-xs text-zinc-400 leading-relaxed font-sans mb-6">
+                  {t.roadmap3Desc}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-emerald-400 pt-4 border-t border-zinc-900/60 font-black text-xs font-mono uppercase tracking-wide">
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+                <span>{t.roadmap3Solve}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Meet Our Client-Scale Strategy Team Section */}
+        <div className="mt-24 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-500 flex items-center justify-center gap-2">
+              <Users className="h-4 w-4 text-amber-500" />
+              <span>THE ADDIS ABABA STRATEGY BOARD</span>
+            </span>
+            <h3 className="mt-4 text-3xl font-black tracking-tight text-white font-sans sm:text-4xl text-balance">
+              {t.teamHeading}
+            </h3>
+            <p className="mt-2 text-xs text-zinc-400 font-sans max-w-xl mx-auto leading-relaxed">
+              {t.teamSub}
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-3 max-w-5xl mx-auto">
+            {/* Team Member 1: Nafyad */}
+            <div className="card-elevated-3d p-6 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+              <div className="relative w-24 h-24 mb-6 rounded-full p-[2px] bg-gradient-to-b from-amber-500/30 to-zinc-900 group-hover:from-amber-400 transition-all duration-500">
+                <div className="w-full h-full rounded-full bg-zinc-950/90 flex items-center justify-center relative overflow-hidden backdrop-blur-3xl border border-white/5">
+                  <div className="absolute inset-0 bg-radial from-amber-500/20 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <span className="font-sans text-3xl font-black text-amber-500 z-10 select-none group-hover:scale-110 transition-transform duration-300">
+                    N
+                  </span>
+                  <div className="absolute bottom-1 w-12 h-[1px] bg-amber-500/30 animate-pulse" />
+                </div>
+              </div>
+              <h4 className="text-md font-bold text-white tracking-tight">{t.member1Name}</h4>
+              <p className="font-mono text-[9px] text-amber-500 uppercase tracking-widest mt-1 font-semibold">
+                {t.member1Role}
+              </p>
+              <p className="text-xs text-zinc-400 mt-4 leading-relaxed font-sans max-w-xs">
+                {t.member1Desc}
+              </p>
+            </div>
+
+            {/* Team Member 2: Abel */}
+            <div className="card-elevated-3d p-6 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+              <div className="relative w-24 h-24 mb-6 rounded-full p-[2px] bg-gradient-to-b from-amber-500/30 to-zinc-900 group-hover:from-amber-400 transition-all duration-500">
+                <div className="w-full h-full rounded-full bg-zinc-950/90 flex items-center justify-center relative overflow-hidden backdrop-blur-3xl border border-white/5">
+                  <div className="absolute inset-0 bg-radial from-amber-500/20 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <span className="font-sans text-3xl font-black text-amber-400 z-10 select-none group-hover:scale-110 transition-transform duration-300">
+                    A
+                  </span>
+                  <div className="absolute bottom-1 w-12 h-[1px] bg-amber-500/30 animate-pulse" />
+                </div>
+              </div>
+              <h4 className="text-md font-bold text-white tracking-tight">{t.member2Name}</h4>
+              <p className="font-mono text-[9px] text-amber-500 uppercase tracking-widest mt-1 font-semibold">
+                {t.member2Role}
+              </p>
+              <p className="text-xs text-zinc-400 mt-4 leading-relaxed font-sans max-w-xs">
+                {t.member2Desc}
+              </p>
+            </div>
+
+            {/* Team Member 3: Selam */}
+            <div className="card-elevated-3d p-6 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+              <div className="relative w-24 h-24 mb-6 rounded-full p-[2px] bg-gradient-to-b from-amber-500/30 to-zinc-900 group-hover:from-amber-400 transition-all duration-500">
+                <div className="w-full h-full rounded-full bg-zinc-950/90 flex items-center justify-center relative overflow-hidden backdrop-blur-3xl border border-white/5">
+                  <div className="absolute inset-0 bg-radial from-amber-500/20 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <span className="font-sans text-3xl font-black text-amber-500 z-10 select-none group-hover:scale-110 transition-transform duration-300">
+                    S
+                  </span>
+                  <div className="absolute bottom-1 w-12 h-[1px] bg-amber-500/30 animate-pulse" />
+                </div>
+              </div>
+              <h4 className="text-md font-bold text-white tracking-tight">{t.member3Name}</h4>
+              <p className="font-mono text-[9px] text-amber-500 uppercase tracking-widest mt-1 font-semibold">
+                {t.member3Role}
+              </p>
+              <p className="text-xs text-zinc-400 mt-4 leading-relaxed font-sans max-w-xs">
+                {t.member3Desc}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Contact Submission Node */}

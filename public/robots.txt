@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://businesswzweb.vercel.app/sitemap.xml
