@@ -1,0 +1,6 @@
+{
+  "name": "BusinessWZWeb",
+  "description": "High-velocity web architecture, local semantic optimization, and real-time business system modernization for enterprises in East Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
