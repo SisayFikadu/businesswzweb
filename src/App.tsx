@@ -317,7 +317,10 @@ export default function App() {
             <div 
               className="absolute -top-12 left-[8%] w-60 h-60 opacity-25 sm:opacity-40 blur-[0.5px] backdrop-blur-[6px] rounded-3xl transition-transform duration-500"
               style={{ 
-                animation: bgSpeed === "paused" ? "none" : `float-angular-1 ${bgSpeed === "slow" ? 95 : bgSpeed === "kinetic" ? 18 : 50}s ease-in-out infinite`,
+                animationName: bgSpeed === "paused" ? "none" : "float-angular-1",
+                animationDuration: `${bgSpeed === "slow" ? 95 : bgSpeed === "kinetic" ? 18 : 50}s`,
+                animationTimingFunction: "ease-in-out",
+                animationIterationCount: "infinite",
                 animationPlayState: bgSpeed === "paused" ? "paused" : "running",
                 transform: `scale(${bgScale})`
               }}
@@ -339,7 +342,10 @@ export default function App() {
             <div 
               className="absolute top-[25%] -right-12 w-72 h-72 opacity-30 sm:opacity-45 blur-[0.5px] backdrop-blur-[8px] rounded-3xl transition-transform duration-500"
               style={{ 
-                animation: bgSpeed === "paused" ? "none" : `float-angular-2 ${bgSpeed === "slow" ? 120 : bgSpeed === "kinetic" ? 22 : 65}s ease-in-out infinite`,
+                animationName: bgSpeed === "paused" ? "none" : "float-angular-2",
+                animationDuration: `${bgSpeed === "slow" ? 120 : bgSpeed === "kinetic" ? 22 : 65}s`,
+                animationTimingFunction: "ease-in-out",
+                animationIterationCount: "infinite",
                 animationPlayState: bgSpeed === "paused" ? "paused" : "running",
                 transform: `scale(${bgScale * 1.15})`
               }}
@@ -363,7 +369,10 @@ export default function App() {
             <div 
               className="absolute bottom-6 left-[4%] w-52 h-52 opacity-25 sm:opacity-35 blur-[0.5px] backdrop-blur-[5px] rounded-full transition-transform duration-500"
               style={{ 
-                animation: bgSpeed === "paused" ? "none" : `float-angular-3 ${bgSpeed === "slow" ? 110 : bgSpeed === "kinetic" ? 20 : 60}s ease-in-out infinite`,
+                animationName: bgSpeed === "paused" ? "none" : "float-angular-3",
+                animationDuration: `${bgSpeed === "slow" ? 110 : bgSpeed === "kinetic" ? 20 : 60}s`,
+                animationTimingFunction: "ease-in-out",
+                animationIterationCount: "infinite",
                 animationPlayState: bgSpeed === "paused" ? "paused" : "running",
                 transform: `scale(${bgScale * 0.9})`
               }}
@@ -381,7 +390,10 @@ export default function App() {
             <div 
               className="absolute top-6 right-[22%] w-44 h-44 opacity-20 sm:opacity-30 blur-[0.5px] backdrop-blur-[6px] rounded-2xl transition-transform duration-500"
               style={{ 
-                animation: bgSpeed === "paused" ? "none" : `float-angular-4 ${bgSpeed === "slow" ? 140 : bgSpeed === "kinetic" ? 25 : 80}s ease-in-out infinite`,
+                animationName: bgSpeed === "paused" ? "none" : "float-angular-4",
+                animationDuration: `${bgSpeed === "slow" ? 140 : bgSpeed === "kinetic" ? 25 : 80}s`,
+                animationTimingFunction: "ease-in-out",
+                animationIterationCount: "infinite",
                 animationPlayState: bgSpeed === "paused" ? "paused" : "running",
                 transform: `scale(${bgScale * 0.95})`
               }}

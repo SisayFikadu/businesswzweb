@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Globe, Terminal, Shield, Zap } from "lucide-react";
 
 interface BrandingHeaderProps {
@@ -7,36 +8,71 @@ interface BrandingHeaderProps {
 }
 
 export default function BrandingHeader({ language, setLanguage, activeSection }: BrandingHeaderProps) {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        setScrollProgress(window.scrollY / totalScroll);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Run once at init
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Compute elegant color interpolation
+  // 0.0 -> Amber (38, 92%, 50%)
+  // 0.5 -> Cyan/Teal (174, 90%, 45%)
+  // 1.0 -> Indigo/Purple (250, 85%, 55%)
+  let h = 38;
+  let s = 92;
+  let l = 50;
+
+  if (scrollProgress <= 0.5) {
+    const t = scrollProgress / 0.5; // 0 to 1
+    h = 38 + (174 - 38) * t;
+    s = 92 + (90 - 92) * t;
+    l = 50 + (45 - 50) * t;
+  } else {
+    const t = (scrollProgress - 0.5) / 0.5; // 0 to 1
+    h = 174 + (250 - 174) * t;
+    s = 90 + (85 - 90) * t;
+    l = 45 + (55 - 45) * t;
+  }
+
   const translations = {
     en: {
       subtitle: "Full-Stack Design & Marketing Studio",
       metaHeader: "Search & Discovery Optimization Active",
       tagline: "High-Performance Digital Engineering",
-      navPortfolios: "Case Studies & Work",
-      navHubs: "Modernization Hubs",
-      navGraph: "Conversion Science",
-      navAiAgent: "FAQ & Insights",
-      cta: "Start Your Project"
+      navPortfolios: "Our Work",
+      navHubs: "Our Services",
+      navGraph: "Speed & ROI",
+      navAiAgent: "FAQs",
+      cta: "Contact Us"
     },
     am: {
       subtitle: "የዲዛይን እና የማርኬቲንግ ስቱዲዮ",
       metaHeader: "የፍለጋ እና የደህንነት ማመቻቸት ገባሪ ነው",
-      tagline: "ከፍተኛ አፈፃፀም ያለው የዲጂታል መሠረተ ልማት",
-      navPortfolios: "ተጨባጭ ፕሮጀክቶች",
-      navHubs: "ቴክኖሎጂ ማዕከላት",
-      navGraph: "የሽያጭ ለውጥ መለኪያዎች",
-      navAiAgent: "ጥያቄ እና መልሶች",
-      cta: "ስራዎን ያስጀምሩ"
+      tagline: "ከጨማሪ አፈፃፀም ያለው የዲጂታል መሠረተ ልማት",
+      navPortfolios: "ሥራዎቻችን",
+      navHubs: "አገልግሎቶቻችን",
+      navGraph: "ፍጥነት እና ገቢ",
+      navAiAgent: "ጥያቄዎች",
+      cta: "ያግኙን"
     },
     om: {
       subtitle: "Dizaayinii fi Marketing Istuudiyoo",
       metaHeader: "Optimizaashinii Maamiltootaa Active",
       tagline: "Infraastraaktshara Diijitaalaa Giddugaleessaa",
-      navPortfolios: "Dhimmoota Hojii & Work",
-      navHubs: "Wirtuulee Modernize",
-      navGraph: "Mirkaneessa Gurgurtaa",
-      navAiAgent: "FAQ & Hubannoo",
-      cta: "Hojii Jalqabi"
+      navPortfolios: "Hojii Keenya",
+      navHubs: "Tajaajila Keenya",
+      navGraph: "Saffisa & Galii",
+      navAiAgent: "Gaaffilee",
+      cta: "Nuti Qunnamaa"
     }
   };
 
@@ -44,8 +80,41 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
 
   return (
     <header id="app-header" className="fixed top-0 left-0 right-0 z-50 w-full bg-zinc-950/30 bg-gradient-to-r from-zinc-950/40 via-amber-500/[0.02] to-zinc-950/40 backdrop-blur-md border-b border-zinc-900/40 shadow-[0_12px_40px_rgba(0,0,0,0.7)] transition-all duration-300 select-none">
-      {/* High-Tech Laser Ingress Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-amber-500/0 via-amber-500/25 to-amber-500/0 animate-pulse pointer-events-none" />
+      {/* Repeating Pipe Characters Background Pattern with dynamic scroll-linked color */}
+      <div 
+        className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center overflow-hidden opacity-20 pointer-events-none select-none tracking-[0.25em] font-mono text-[10px] whitespace-nowrap transition-colors duration-300"
+        style={{
+          color: `hsla(${h}, ${s}%, ${l}%, 0.45)`,
+          textShadow: `0 0 8px hsla(${h}, ${s}%, ${l}%, 0.3)`,
+          maskImage: "linear-gradient(to right, transparent, white 20%, white 80%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, white 20%, white 80%, transparent)",
+        }}
+      >
+        {"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"}
+      </div>
+
+      {/* Ambient Color Ribbon (changes color smoothly on scroll) */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-300 pointer-events-none"
+        style={{
+          background: `linear-gradient(90deg, 
+            hsla(${h}, ${s}%, ${l}%, 0.05) 0%, 
+            hsla(${h}, ${s}%, ${l}%, 0.3) 50%, 
+            hsla(${h}, ${s}%, ${l}%, 0.05) 100%)`,
+        }}
+      />
+      {/* Scroll Progress Indicator Line (vibrant glow tracking active viewport) */}
+      <div 
+        className="absolute bottom-0 left-0 h-[2px] w-full transition-transform duration-100 ease-out origin-left pointer-events-none"
+        style={{
+          transform: `scaleX(${scrollProgress})`,
+          background: `linear-gradient(90deg, 
+            hsla(${h}, ${s}%, ${l}%, 0.3) 0%, 
+            hsla(${h}, ${s}%, ${l}%, 0.8) 70%, 
+            hsla(${h}, ${s}%, ${l}%, 1) 100%)`,
+          boxShadow: `0 1px 12px hsla(${h}, ${s}%, ${l}%, 0.8)`
+        }}
+      />
       
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8 relative">
         
@@ -92,7 +161,7 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
                 : "border-transparent text-zinc-400 hover:text-white hover:bg-zinc-900/60 hover:border-zinc-800/80"
             }`}
           >
-            <span className={`font-mono text-[10px] font-semibold transition-colors ${activeSection === "bi-graph" ? "text-amber-500" : "text-zinc-500 group-hover:text-zinc-300"}`}>01.</span> {t.navGraph}
+            {t.navGraph}
           </a>
           <a
             href="#modernization-hubs"
@@ -102,7 +171,7 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
                 : "border-transparent text-zinc-400 hover:text-white hover:bg-zinc-900/60 hover:border-zinc-800/80"
             }`}
           >
-            <span className={`font-mono text-[10px] font-semibold transition-colors ${activeSection === "modernization-hubs" ? "text-amber-500" : "text-zinc-500 group-hover:text-zinc-300"}`}>02.</span> {t.navHubs}
+            {t.navHubs}
           </a>
           <a
             href="#case-studies"
@@ -112,7 +181,7 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
                 : "border-transparent text-zinc-400 hover:text-white hover:bg-zinc-900/60 hover:border-zinc-800/80"
             }`}
           >
-            <span className={`font-mono text-[10px] font-semibold transition-colors ${activeSection === "case-studies" ? "text-amber-500" : "text-zinc-500 group-hover:text-zinc-300"}`}>03.</span> {t.navPortfolios}
+            {t.navPortfolios}
           </a>
           <a
             href="#faq"
@@ -122,7 +191,7 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
                 : "border-transparent text-zinc-400 hover:text-white hover:bg-zinc-900/60 hover:border-zinc-800/80"
             }`}
           >
-            <span className={`font-mono text-[10px] font-semibold transition-colors ${activeSection === "faq" ? "text-amber-500" : "text-zinc-500 group-hover:text-zinc-300"}`}>04.</span> {t.navAiAgent}
+            {t.navAiAgent}
           </a>
         </nav>
 
@@ -165,7 +234,7 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
 
           {/* Core Interactive Action Button */}
           <a
-            href="#modernization-hubs"
+            href="#about-contact"
             className="hidden sm:inline-flex items-center justify-center rounded bg-white px-3.5 py-1.5 text-xs font-semibold text-black hover:bg-amber-500 transition-all duration-150"
           >
             {t.cta}

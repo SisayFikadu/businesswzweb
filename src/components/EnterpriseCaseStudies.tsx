@@ -1,8 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft, Check, AlertCircle, ArrowRight } from "lucide-react";
 
 interface EnterpriseCaseStudiesProps {
   language: "en" | "am" | "om";
+}
+
+function AnimatedCounter({ target, suffix = "", duration = 1500 }: { target: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * target));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [target, duration]);
+
+  return <span className="font-mono text-3xl sm:text-4xl font-black text-amber-500 tracking-tight glow-text-gold">{count}{suffix}</span>;
 }
 
 export default function EnterpriseCaseStudies({ language }: EnterpriseCaseStudiesProps) {
@@ -26,6 +45,9 @@ export default function EnterpriseCaseStudies({ language }: EnterpriseCaseStudie
       statusLive: "ACTIVE & SUCCESSFUL",
       viewProject: "Start Your Project Like This",
       featuresTitle: "Project Benefits:",
+      statProjCount: "Previous Projects Delivered",
+      statSpeedIndex: "Google Pagespeed Average",
+      statConversion: "Average Lead Generation Jump"
     },
     am: {
       title: "ለደንበኞቻችን የሰራናቸው ምርጥ ዌብሳይቶች",
@@ -36,6 +58,9 @@ export default function EnterpriseCaseStudies({ language }: EnterpriseCaseStudie
       statusLive: "በስራ ላይ ያለ (ስኬታማ)",
       viewProject: "የእርስዎንም ቢዝነስ በዚህ መልኩ ያስጀምሩ",
       featuresTitle: "የተመዘገቡ ውጤቶች፡",
+      statProjCount: "የተጠናቀቁ ዘመናዊ ድረ-ገጾች",
+      statSpeedIndex: "አማካይ የሞባይል ስፒድ ኢንዴክስ",
+      statConversion: "አማካይ የሽያጭ ደንበኞች ዕድገት"
     },
     om: {
       title: "Weebsaaytoota Miidhagoo Nuti Hojjenne",
@@ -46,6 +71,9 @@ export default function EnterpriseCaseStudies({ language }: EnterpriseCaseStudie
       statusLive: "AMMA NI HOJJETA",
       viewProject: "Daldala keetif weebsaayitii haaraa hojjedhu",
       featuresTitle: "Milkiilee Hojii Keenyaa:",
+      statProjCount: "Pirojektoota Milkiin Hojjetan",
+      statSpeedIndex: "Saffisa Geessituu Google",
+      statConversion: "Dabala Gurgurtaa fi Maamiltoota"
     }
   };
 
@@ -154,6 +182,36 @@ export default function EnterpriseCaseStudies({ language }: EnterpriseCaseStudie
             >
               <ChevronRight className="h-5 w-5" />
             </button>
+          </div>
+        </div>
+
+        {/* Animated Numerical Metrics Counters Section */}
+        <div id="project-numerical-stats" className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 border-y border-zinc-900/60 py-8 bg-zinc-950/20 rounded-xl px-6">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+            <div className="flex items-baseline gap-1">
+              <AnimatedCounter target={23} suffix="+" />
+            </div>
+            <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mt-1">
+              {t.statProjCount}
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-1 border-t sm:border-t-0 sm:border-x border-zinc-900/60 pt-4 sm:pt-0 sm:px-8">
+            <div className="flex items-baseline gap-1">
+              <AnimatedCounter target={100} suffix="%" />
+            </div>
+            <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mt-1">
+              {t.statSpeedIndex}
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-1 border-t sm:border-t-0 pt-4 sm:pt-0 sm:pl-4">
+            <div className="flex items-baseline gap-1">
+              <AnimatedCounter target={140} suffix="%" />
+            </div>
+            <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mt-1">
+              {t.statConversion}
+            </span>
           </div>
         </div>
 
