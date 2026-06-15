@@ -13,11 +13,12 @@ export default function LocalSchemaJsonLd() {
         {
           "@type": "ProfessionalService",
           "@id": "https://businesswzweb.vercel.app/#service",
-          "name": "BusinessWZWeb",
+          "name": "businesswzweb",
           "alternateName": [
             "Weebsaayitii nama hojjetu",
             "ዌብሳይት ድቭሎፕመንት",
-            "Ethiopia Elite Web Architecture"
+            "Ethiopia Elite Web Architecture",
+            "BusinessWZWeb"
           ],
           "description": "Enterprise cloud web design, Telebirr integration, and high-performance React architectures for commercial districts across Addis Ababa.",
           "url": "https://businesswzweb.vercel.app",
@@ -56,7 +57,11 @@ export default function LocalSchemaJsonLd() {
           "@type": "WebSite",
           "@id": "https://businesswzweb.vercel.app/#website",
           "url": "https://businesswzweb.vercel.app",
-          "name": "BusinessWZWeb",
+          "name": "businesswzweb",
+          "alternateName": [
+            "BusinessWZWeb",
+            "Business WZ Web"
+          ],
           "description": "Localized cloud database architecture & web development in Ethiopia. Specialized in sub-city modernization and financial POS reconciliation.",
           "language": ["en", "am", "om"],
           "publisher": {

@@ -55,13 +55,25 @@ export default function BrandingHeader({ language, setLanguage, activeSection }:
         
         {/* Branding & Logo Details */}
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded border border-zinc-800 bg-zinc-950 font-mono text-sm font-bold text-amber-500 tracking-tight">
-            Ø
+          <div className="relative h-9 w-9 flex items-center justify-center shrink-0">
+            {/* The brand icon integrated cleanly */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" className="h-full w-full">
+              <rect width="128" height="128" rx="28" fill="#09090b" stroke="#27272a" strokeWidth="4"/>
+              <circle cx="64" cy="64" r="48" fill="none" stroke="#f59e0b" strokeWidth="2" strokeOpacity="0.15" strokeDasharray="4, 4"/>
+              <defs>
+                <linearGradient id="headerAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fbbf24" />
+                  <stop offset="100%" stopColor="#d97706" />
+                </linearGradient>
+              </defs>
+              <circle cx="64" cy="64" r="32" fill="none" stroke="url(#headerAmberGrad)" strokeWidth="10" strokeLinecap="round"/>
+              <line x1="38" y1="90" x2="90" y2="38" stroke="url(#headerAmberGrad)" strokeWidth="10" strokeLinecap="round"/>
+            </svg>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-sans text-md font-bold tracking-tight text-white">
-                BusinessWZWeb
+              <span className="font-sans text-md font-black tracking-tight text-white uppercase sm:normal-case">
+                business<span className="text-amber-500">wzweb</span>
               </span>
             </div>
             <p className="font-mono text-[9px] uppercase tracking-widest text-zinc-500">

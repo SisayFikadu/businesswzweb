@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Dark technical background -->
+  <rect width="128" height="128" rx="28" fill="#09090b" stroke="#18181b" stroke-width="2"/>
+  <!-- Outer subtle technical ring -->
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.15" stroke-dasharray="4, 4"/>
+  <!-- Sleek core amber gradient glyph of Ø with modern layout lines -->
+  <defs>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <!-- The 'O' ring -->
+  <circle cx="64" cy="64" r="32" fill="none" stroke="url(#amberGrad)" stroke-width="8" stroke-linecap="round"/>
+  <!-- The diagonal slash representing 'Ø' with premium high-tech precision -->
+  <line x1="38" y1="90" x2="90" y2="38" stroke="url(#amberGrad)" stroke-width="8" stroke-linecap="round"/>
+  <!-- Tech alignment corners -->
+  <path d="M20 36 V20 H36" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M108 36 V20 H92" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M20 92 V108 H36" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M108 92 V108 H92" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+</svg>
